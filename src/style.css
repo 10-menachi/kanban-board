@@ -33,3 +33,26 @@ header {
   height: 5rem;
   object-fit: contain;
 }
+
+.footer {
+  padding-block: 10px;
+  padding-inline: 20px;
+  border: 3px solid black;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(187, 231, 238);
+}
+
+.svg {
+  margin-block: auto;
+}
+
+.footer-row {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-row svg {
+  height: 30px;
+  width: 30px;
+}
