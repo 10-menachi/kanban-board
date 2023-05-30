@@ -65,3 +65,29 @@ header {
   height: 30px;
   width: 30px;
 }
+
+.display-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+  padding: 7%;
+  margin-right: 30%;
+}
+
+.item {
+  width: 380px;
+  height: 300px;
+  border-radius: 2rem;
+  box-shadow: 0 4px 21px -1px rgba(6, 177, 154, 0.79);
+  align-items: center;
+}
+
+.food-image {
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+.food-title {
+  margin-left: 40%;
+  
+}
