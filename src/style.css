@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  padding: 1px;
+  background-color: rgb(173, 238, 247);
+}
+
 header {
   display: flex;
   justify-content: start;
@@ -32,4 +40,28 @@ header {
 .logo img {
   height: 5rem;
   object-fit: contain;
+}
+
+.footer {
+  padding-block: 10px;
+  padding-inline: 20px;
+  border: 3px solid black;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(187, 231, 238);
+  margin-top: auto;
+}
+
+.svg {
+  margin-block: auto;
+}
+
+.footer-row {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-row svg {
+  height: 30px;
+  width: 30px;
 }
