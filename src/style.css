@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  padding: 1px;
+  background-color: rgb(173, 238, 247);
+}
+
 header {
   display: flex;
   justify-content: start;
@@ -41,6 +49,7 @@ header {
   display: flex;
   justify-content: space-between;
   background-color: rgb(187, 231, 238);
+  margin-top: auto;
 }
 
 .svg {
