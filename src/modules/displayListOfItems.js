@@ -5,10 +5,10 @@ const createCategoryTemplate = (category) => `
             <div class="like">
             <svg class="heart">
                     <use href="icons.svg#heart-like"></use>
-                </svg>
+              </svg>
              <h1 class="likes">likes</h1> 
              </div>
-            <button type="button" id="comment"> Comments</button>
+            <button type="button" id="comment" data-id="${category.idCategory}"> Comments</button>
             <button type="button" id="reservation"> Resevation</button>
       </div>
   `;
