@@ -11,6 +11,7 @@ const createCategoryTemplate = (category) => `
                 </div>
              <div class="likes"><span></span>likes</div> 
             <button type="button" id="comment"> Comments</button>
+              
             <button type="button" id="reservation"> Resevation</button>
       </div>
   `;
@@ -19,7 +20,6 @@ const display = async (apiUrl) => {
   const displayItems = document.querySelector('.display-items');
   const response = await fetch(apiUrl);
   const data = await response.json();
-
   const templates = data.categories.map(createCategoryTemplate);
   displayItems.innerHTML = templates.join('');
 
