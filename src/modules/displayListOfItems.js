@@ -10,8 +10,7 @@ const createCategoryTemplate = (category) => `
                 </svg>
                 </div>
              <div class="likes"><span></span>likes</div> 
-            <button type="button" id="comment" data-id="${category.idCategory}"> Comments</button>
-              
+            <button type="button" id="comment" data-id="${category.idCategory}">Comments</button>              
             <button type="button" id="reservation"> Resevation</button>
       </div>
   `;
@@ -22,6 +21,9 @@ const display = async (apiUrl) => {
   const data = await response.json();
   const templates = data.categories.map(createCategoryTemplate);
   displayItems.innerHTML = templates.join('');
+  const itemCount = data.categories.length; // Count of food items
+  const itemsSpan = document.getElementById('count-items');
+  itemsSpan.textContent = `${itemCount}`;
 
   const hearts = document.querySelectorAll('.heart');
   hearts.forEach((heart) => {
