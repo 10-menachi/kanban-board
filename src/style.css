@@ -122,8 +122,6 @@ header {
   text-decoration: none;
   border: none;
   cursor: pointer;
-
-  /* border-radius: 5px; */
   margin-left: 140px;
   margin-top: 10px;
 }
@@ -143,6 +141,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 6rem;
+  overflow: scroll;
 }
 
 .hide {
@@ -170,4 +170,31 @@ header {
   font-size: 1.2rem;
   color: #000;
   cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: stretch;
+}
+
+textarea {
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+button {
+  background-color: rgb(20, 75, 63);
+  color: rgb(231, 219, 195);
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  font-size: 25px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
