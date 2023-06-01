@@ -10,8 +10,7 @@ const createCategoryTemplate = (category) => `
                 </svg>
                 </div>
              <div class="likes"><span></span>likes</div> 
-            <button type="button" id="comment" data-id="${category.idCategory}"> Comments</button>
-              
+            <button type="button" id="comment" data-id="${category.idCategory}">Comments</button>              
             <button type="button" id="reservation"> Resevation</button>
       </div>
   `;
