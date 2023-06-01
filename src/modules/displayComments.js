@@ -1,3 +1,4 @@
+import commentsCounter from './commentsCounter';
 import postComment from './postComment.js';
 
 const displayComments = (current, comments) => {
@@ -14,7 +15,7 @@ const displayComments = (current, comments) => {
             <h2 class="food-title">${current[0].strCategory}</h2>
             <p class="food-description">${current[0].strCategoryDescription}</p>
             <div class="comments">
-                <h2 class="comment-title">Comments (${comments.length})</h2>
+                <h2 class="comment-title">Comments <span class="count">(${1})</span></h2>
             </div>
             <form class="comment-form">
                 <input type="text" class="name" id="name" name="name" placeholder="Your Name" required>
@@ -46,7 +47,9 @@ const displayComments = (current, comments) => {
     const popup = lastCloseButton.closest('.popup');
     popup.classList.toggle('hide');
   });
-
+  const countSpan = document.querySelector('.count');
+  const count = commentsCounter();
+  countSpan.textContent = `(${count})`;
   const form = document.querySelector('.comment-form');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
