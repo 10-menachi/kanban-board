@@ -29,7 +29,7 @@ const display = async (apiUrl) => {
       const span = heart.parentElement.nextElementSibling.firstElementChild;
       const i = span.textContent;
       span.textContent = +i + 1;
-      setTimeout(() => createLike(heart.id), 10000);
+      createLike(heart.id);
     });
   });
 
