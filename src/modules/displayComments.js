@@ -1,3 +1,5 @@
+import commentsCounter from './commentsCounter';
+
 const displayComments = (current, comments) => {
   const popupContainer = document.querySelector('.popup-container');
   popupContainer.innerHTML = '';
@@ -12,7 +14,7 @@ const displayComments = (current, comments) => {
             <h2 class="food-title">${current[0].strCategory}</h2>
             <p class="food-description">${current[0].strCategoryDescription}</p>
             <div class="comments">
-                <h2 class="comment-title">Comments (${comments.length})</h2>
+                <h2 class="comment-title">Comments <span class="count">(${1})</span></h2>
             </div>
         </div>
     </div>
@@ -39,6 +41,10 @@ const displayComments = (current, comments) => {
     const popup = lastCloseButton.closest('.popup');
     popup.classList.toggle('hide');
   });
+
+  const countSpan = document.querySelector('.count');
+  const count = commentsCounter();
+  countSpan.textContent = `(${count})`;
 };
 
 export default displayComments;
