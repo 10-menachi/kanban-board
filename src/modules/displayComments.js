@@ -1,4 +1,4 @@
-import commentsCounter from './commentsCounter';
+import commentsCounter from './commentsCounter.js';
 import postComment from './postComment.js';
 
 const displayComments = (current, comments) => {
