@@ -77,6 +77,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+![Live Demo Link](https://10-menachi.github.io/kanban-board/build/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
