@@ -79,8 +79,6 @@ header {
 .item {
   width: 380px;
   height: 400px;
-
-  /* border-radius: 2rem; */
   box-shadow: 0 4px 21px -1px rgba(6, 177, 154, 0.79);
   align-items: center;
   margin-bottom: 2rem;

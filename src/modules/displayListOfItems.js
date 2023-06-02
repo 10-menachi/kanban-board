@@ -21,7 +21,7 @@ const display = async (apiUrl) => {
   const data = await response.json();
   const templates = data.categories.map(createCategoryTemplate);
   displayItems.innerHTML = templates.join('');
-  const itemCount = data.categories.length; // Count of food items
+  const itemCount = data.categories.length;
   const itemsSpan = document.getElementById('count-items');
   itemsSpan.textContent = `${itemCount}`;
 
