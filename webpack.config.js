@@ -20,7 +20,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'build'),
-    assetModuleFilename: 'asset/resource/[name][ext]',
+    assetModuleFilename: '[name][ext]',
     clean: true,
   },
   devtool: 'inline-source-map',
