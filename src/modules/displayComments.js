@@ -1,12 +1,15 @@
+import getComments from './getComments.js';
 import postComment from './postComment.js';
 
-const displayComments = (current, comments) => {
+const displayComments = async (current) => {
   const popupContainer = document.querySelector('.popup-container');
   popupContainer.innerHTML = '';
 
+  const comments = await getComments(current[0].idCategory);
+
   const pop = `
     <div class="popup">
-        <div class="popup-inside">
+         <div class="popup-inside">
             <div class="close-div">
                 <i class="fas fa-times close"></i>
             </div>
@@ -23,11 +26,15 @@ const displayComments = (current, comments) => {
             </form>
         </div>
     </div>
-    `;
+  `;
 
   popupContainer.innerHTML = pop;
 
   const commentsDiv = document.querySelector('.comments');
+  commentsDiv.innerHTML = `
+    <h2 class="comment-title">Comments (${comments.length})</h2>
+  `;
+
   comments.forEach((comment) => {
     const commentDiv = document.createElement('div');
     commentDiv.classList.add('comment');
@@ -35,7 +42,7 @@ const displayComments = (current, comments) => {
         <span class="comment-date">${comment.creation_date}</span>
         <span class="comment-name">${comment.username}: </span>
         <span class="comment-body">${comment.comment}</span>
-        `;
+    `;
     commentsDiv.appendChild(commentDiv);
   });
 
@@ -54,18 +61,16 @@ const displayComments = (current, comments) => {
     const name = form.name.value;
     const comment = form.comment.value;
     await postComment(id, name, comment);
-    const commentsDiv = document.querySelector('.comments');
-    commentsDiv.innerHTML = '';
-    comments.forEach((comment) => {
-      const commentDiv = document.createElement('div');
-      commentDiv.classList.add('comment');
-      commentDiv.innerHTML = `
-        <span class="comment-date">${comment.creation_date}</span>
-        <span class="comment-name">${comment.username}: </span>
-        <span class="comment-body">${comment.comment}</span>
-        `;
-      commentsDiv.appendChild(commentDiv);
-    });
+
+    const commentDiv = document.createElement('div');
+    commentDiv.classList.add('comment');
+    commentDiv.innerHTML = `
+    <span class="comment-date">${new Date().toLocaleString()}</span>
+    <span class="comment-name">${name}: </span>
+    <span class="comment-body">${comment}</span>
+  `;
+    commentsDiv.appendChild(commentDiv);
+
     form.reset();
   });
 };
