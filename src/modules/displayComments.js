@@ -73,6 +73,9 @@ const displayComments = async (current) => {
     <span class="comment-body">${comment}</span>
   `;
     commentsDiv.appendChild(commentDiv);
+    const countSpan = document.querySelector('.count');
+    const count = commentsCounter();
+    countSpan.textContent = `(${count})`;
 
     form.reset();
   });
