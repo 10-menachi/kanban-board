@@ -1,4 +1,4 @@
-import { createLike, getLikes } from "./Likes.js";
+import { createLike, getLikes } from './Likes.js';
 
 const createCategoryTemplate = (category) => `
     <div class='item'>
@@ -16,18 +16,18 @@ const createCategoryTemplate = (category) => `
   `;
 
 const display = async (apiUrl) => {
-  const displayItems = document.querySelector(".display-items");
+  const displayItems = document.querySelector('.display-items');
   const response = await fetch(apiUrl);
   const data = await response.json();
   const templates = data.categories.map(createCategoryTemplate);
-  displayItems.innerHTML = templates.join("");
+  displayItems.innerHTML = templates.join('');
   const itemCount = data.categories.length; // Count of food items
-  const itemsSpan = document.getElementById("count-items");
+  const itemsSpan = document.getElementById('count-items');
   itemsSpan.textContent = `${itemCount}`;
 
-  const hearts = document.querySelectorAll(".heart");
+  const hearts = document.querySelectorAll('.heart');
   hearts.forEach((heart) => {
-    heart.addEventListener("click", () => {
+    heart.addEventListener('click', () => {
       const span = heart.parentElement.nextElementSibling.firstElementChild;
       const i = span.textContent;
       span.textContent = +i + 1;
