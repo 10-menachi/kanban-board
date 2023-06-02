@@ -164,6 +164,7 @@ header {
   display: flex;
   justify-content: end;
   align-items: center;
+  margin-top: 5rem;
 }
 
 .popup-inside i {
