@@ -69,7 +69,7 @@
 
 ## 🤯 Live video <a name="walk-through"></a>
 
-![Live Video Link](https://drive.google.com/file/d/1xWHP4MPAna76YZNMoJ_UtMaGH71WS3on/view?usp=sharing)
+[Live Video Link](https://drive.google.com/file/d/1xWHP4MPAna76YZNMoJ_UtMaGH71WS3on/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,7 +77,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-![Live Demo Link](https://10-menachi.github.io/kanban-board/build/)
+[Live Demo Link](https://10-menachi.github.io/kanban-board/build/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
