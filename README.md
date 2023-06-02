@@ -69,6 +69,8 @@
 
 ## 🤯 Live video <a name="walk-through"></a>
 
+![Live Video Link](https://drive.google.com/file/d/1xWHP4MPAna76YZNMoJ_UtMaGH71WS3on/view?usp=sharing)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
