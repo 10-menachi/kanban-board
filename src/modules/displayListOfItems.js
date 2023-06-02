@@ -6,7 +6,7 @@ const createCategoryTemplate = (category) => `
         <h2 class="food-title">${category.strCategory}</h2>
             <div class="like">
             <svg class="heart" id=${category.idCategory}>
-                    <use href="icons.svg#heart-like"></use>
+                    <use href="icons.svg#heart-like-red"></use>
                 </svg>
                 </div>
              <div class="likes"><span></span>likes</div> 
