@@ -1,5 +1,5 @@
-import getComments from './getComments.js';
 import commentsCounter from './commentsCounter.js';
+import getComments from './getComments.js';
 import postComment from './postComment.js';
 
 const displayComments = async (current) => {
@@ -33,7 +33,7 @@ const displayComments = async (current) => {
 
   const commentsDiv = document.querySelector('.comments');
   commentsDiv.innerHTML = `
-    <h2 class="comment-title">Comments (${comments.length})</h2>
+    <h2 class="comment-title">Comments <span class="count"></span></h2>
   `;
 
   comments.forEach((comment) => {
